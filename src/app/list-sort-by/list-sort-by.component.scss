@@ -1,0 +1,50 @@
+@import "src/scss/variables";
+
+$sortConditionSpacing: 40px;
+
+@mixin sort-condition-common {
+  display: inline-block;
+  content: "";
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  vertical-align: middle;
+  margin-left: 5px;
+  position: absolute;
+  top: 7px;
+}
+
+.sorter {
+  list-style: none;
+  display: inline-block;
+  user-select: none;
+  cursor: pointer;
+  margin: 10px 0 25px 0;
+}
+
+.sorter__condition {
+  display: inline-block;
+  margin-right: $sortConditionSpacing;
+  position: relative;
+
+  // We could have used nesting, but following styles are already hard enough to read in one go.
+  // Use flat structure instead.
+
+  &--asc {
+    color: $primary-color;
+  }
+
+  &--asc::after {
+    @include sort-condition-common;
+    border-top: 5px solid #000000;
+  }
+
+  &--desc {
+    color: $primary-color;
+  }
+
+  &--desc::after {
+    @include sort-condition-common;
+    border-bottom: 5px solid #000000;
+  }
+}
+

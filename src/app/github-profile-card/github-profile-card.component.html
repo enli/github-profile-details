@@ -1,0 +1,15 @@
+<div class="col-xs-12 col-sm-4 col-md-3">
+  <div class="github-profile-card" tabindex="0" (click)="openProfile()" (keydown)="onProfileKeyDown($event)">
+    <img class="github-profile-card__avatar" [src]="profile.avatar_url"
+         onerror="this.style.visibility = 'hidden';">
+
+    <div class="github-profile-card__meta">
+      <div class="github-profile-card__name">{{profile.name || '&nbsp;'}}</div>
+      <div class="github-profile-card__location">Location: {{profile.location}}</div>
+      <div class="github-profile-card__followers">Followers: {{profile.followers}}</div>
+    </div>
+
+    <button class="github-profile-card__close" (click)="deleteProfile($event)"
+            (keydown)="onDeleteProfileKeyDown($event)"></button>
+  </div>
+</div>

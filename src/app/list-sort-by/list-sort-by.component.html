@@ -1,0 +1,8 @@
+Sort by:
+<ul class="sorter">
+  <li class="sorter__condition" *ngFor="let sortBy of sortByList">
+    <span (click)="onSort(sortBy)"
+          [innerHTML]="sortBy.label"
+          [ngClass]="{'sorter__condition--asc': sortBy.asc, 'sorter__condition--desc': sortBy.desc}"></span>
+  </li>
+</ul>

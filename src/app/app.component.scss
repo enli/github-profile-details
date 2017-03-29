@@ -1,0 +1,15 @@
+@mixin common-input {
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  @include common-input;
+  background-color: #2E76B4;
+  color: #ffffff;
+}
+
+input[type="text"] {
+  @include common-input;
+}

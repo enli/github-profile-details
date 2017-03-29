@@ -1,0 +1,17 @@
+<div class="divider"></div>
+
+<list-sort-by [sortByList]="sortBy" (onSorted)="onProfilesSorted($event)"></list-sort-by>
+
+<div class="github-profiles">
+  <div class="row">
+    <github-profile-card *ngFor="let profile of profiles; trackBy: trackProfile"
+                         [profile]="profile"
+                         (onDeleted)="onDeleted($event)">
+    </github-profile-card>
+  </div>
+
+  <div *ngIf="profiles.length === 0"
+       class="github-profiles__no-data">
+    No profiles added yet. You may add a profile using Add button.
+  </div>
+</div>

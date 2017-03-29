@@ -1,27 +1,38 @@
-# GithubProfileDetails
+# Github Profile Details
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.1.
 
-## Development server
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Features:
+1. Add GitHub profile card using the simple form.
+2. Delete added cards.
+3. Sort cards by name, location and followers.
+4. Open profile page by clicking onto card.
+5. Accessible using keyboard - can navigate between cards, open profile page and delete a card.
 
-## Code scaffolding
+## How to run:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
+Install dependencies:
+```
+npm install
+```
 
-## Build
+Launch app:
+```
+ng serve
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Then navigate to `http://localhost:4200/`
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Issues:
+1. The layout may break slightly (in Sorting menu) below 450px width.
+2. If some card contains lot of information, the card may push other cards in the next row
+ and will create some void.
+ 
+## Possible improvements:
+1. Fix all issues :)
+2. Use intelligent layout system (such as Masonry grid) that organizes cards automatically based on current viewport
+size and the card dimensions, similar to what Google Keep does.
+3. On lower resolutions use better layout for the card.
+4. HTML alert instead of JavaScript alert.
+5. Improve code organization.
+6. Add unit tests.

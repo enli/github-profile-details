@@ -1,0 +1,76 @@
+@import "src/scss/variables";
+@import "src/scss/mixins";
+
+.github-profile-card {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.2);
+  color: #353535;
+  float: left;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  padding: 5px;
+  position: relative;
+  //height: 300px;
+  width: 100%;
+  transition: height 0.25s ease;
+
+  &:hover {
+    box-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    //height: 310px;
+  }
+
+  &:focus {
+    border-color: #2E76B4;
+    text-decoration: underline;
+  }
+}
+
+.github-profile-card__meta {
+  padding-left: 7px;
+  margin-bottom: 10px;
+
+  @include respond-to-mobile {
+    text-align: center;
+  }
+}
+
+.github-profile-card__close {
+  background: transparent;
+  border: 0;
+  content: 'x';
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  top:  10px;
+}
+
+.github-profile-card:hover .github-profile-card__close,
+.github-profile-card__close:focus {
+  /*show only on hover or active state*/
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.github-profile-card__close::after {
+  content: "X";
+  font-weight: bold;
+  height: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+}
+
+.github-profile-card__avatar {
+  height: auto;
+  margin-bottom: 10px;
+  min-height: 220px;
+  width: 100%;
+}
+
+.github-profile-card__name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}

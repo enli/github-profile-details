@@ -1,3 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <form #userAddForm="ngForm" autocomplete="off">
+    <input type="text" [(ngModel)]="model.username"
+           placeholder="github login"
+           name="login"/>
+    <input type="submit" value="Add" (click)="doSearchUser()"/>
+  </form>
+
+  <github-profiles-list></github-profiles-list>
+</div>
